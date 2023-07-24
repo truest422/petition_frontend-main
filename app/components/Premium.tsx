@@ -43,7 +43,7 @@ function MyDialog({ onClose }: DialogProps) {
       setTitle(event.target.value);
     };
   
-    const handleDescChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const handleDescChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
       setDescription(event.target.value);
     };
   
@@ -187,7 +187,7 @@ function MyDialog({ onClose }: DialogProps) {
                                         <textarea
                                             className="border bg-black text-white border-gray-800 w-full rounded-md px-3 py-1 text-white-500 my-1"
                                             value={desc}
-                                            onChange={handleDescChange}
+                                            onChange={(event:ChangeEvent<HTMLTextAreaElement>) => handleDescChange(event)}
                                             rows={4}
                                             id="description"
                                         ></textarea>
